@@ -44,8 +44,7 @@ jobs:
     steps:
       - checkout
       - go-jobs/restore_cache_with_mod_time:
-          cache_dir: out/build
-      - run: touch foo.txt
+          cache_dir: out/dist
       - run: ./gradlew publish --parallel --stacktrace --continue
 
 workflows:
